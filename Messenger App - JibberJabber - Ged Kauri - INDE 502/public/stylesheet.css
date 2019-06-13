@@ -1,0 +1,143 @@
+body {
+    background-image: url("background.jpg");
+}
+
+#logo
+{
+   position:fixed;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+    border-width: medium;
+    border-radius:15px;
+    margin-top: -200px;
+    height: auto;
+    width: auto;
+    margin-left: -250px;
+    text-align: center
+    
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+li a:hover {
+    background-color: #111;
+}
+
+#signup
+{
+    background: rgba(0, 153, 255, 0.9);
+    text-align: center;
+    position:fixed;
+    height:400px;
+    width:275px;
+    border-style: solid;
+    border-color: black;
+    border-width: medium;
+    border-radius:25px;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: -200px;
+}
+#delete
+{
+    background: rgba(0, 153, 255, 0.9);
+    text-align: center;
+    position:fixed;
+    height:200px;
+    width:275px;
+    border-style: solid;
+    border-color: black;
+    border-width: medium;
+    border-radius:25px;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: -200px;
+}
+#edit
+{
+    background: rgba(0, 153, 255, 0.9);
+    text-align: center;
+    position:fixed;
+    height:500px;
+    width:350px;
+    border-style: solid;
+    border-color: black;
+    border-width: medium;
+    border-radius:25px;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -135px;
+    margin-top: -200px;
+}
+#login
+{
+    background: rgba(0, 153, 255, 0.9);
+    text-align: center;
+    position:fixed;
+    height:225px;
+    width:300px;
+    border-style: solid;
+    border-color: black;
+    border-width: medium;
+    border-radius:25px;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -125px;
+    margin-top: -200px;
+}
+#wrapper
+{
+   background: rgba(0, 153, 255, 0.9);
+    text-align: center;
+    position:fixed;
+    height:500px;
+    width:500px;
+    border-style: solid;
+    border-color: black;
+    border-width: medium;
+    border-radius:25px;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: -200px; 
+}
+#messagebox
+{
+    height: 300px;
+    width:475px;
+    background: rgba(102, 217, 255, 0.8);
+    margin-left: 11px; 
+    border-style: solid;
+    border-color: black;
+    border-width: medium;
+    border-radius:25px;
+}

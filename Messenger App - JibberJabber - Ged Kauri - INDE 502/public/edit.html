@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    </head>
+    <body>
+        <div id="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="add.html">Sign Up</a></li>
+                <li><a href="delete.html">Delete Profile</a></li>
+                <li><a href="edit.html">Edit Profile</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+        <div id="edit">
+        <h1>Edit Profile</h1>
+        <h3>Please enter your Username and Password</h3>      
+        <form id ="form" action = "/update" method = "get">
+                Username:<br>
+                    <input type="text" name = "editUsername">
+                <br>
+                Password:<br>
+                    <input type="text" name = "editPassword"> 
+                <br>
+                <h3>What would you like to change?</h3>
+                First Name:<br>
+                    <input type="text" name = "editFirstname">
+                <br>
+                Last Name:<br>
+                    <input type="text" name = "editLastname">
+                <br>
+                Email:<br>
+                    <input type="text" name = "editEmail">
+                <br>
+                DoB:<br>
+                    <input type="text" name = "editDob">
+                <br>
+                Gender:<br>
+                    <input type="text" name = "editGender">
+                <br><br>
+                    <input type="submit" name = "submit" value="submit">
+                <br>
+            </form>
+        </div>
+    </body>
+</html>

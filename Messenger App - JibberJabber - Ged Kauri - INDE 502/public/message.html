@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <script src="browserMqtt.js"></script>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    </head>
+    <body>
+        <div id="wrapper">
+        <div id="currentUser">!currentUser!</div> //Display of the currently signed in User
+        <div id="messageBox">   
+        </div>
+            <br>
+        <form>
+            Receiver: 
+            <input type ="text" id="receiver"> 
+            <br><br>
+            Message: 
+            <input type="text" id="message">
+            <br><br>
+            <input type="button" id="send" value="Send" onclick="sendMessage()">
+        </form>
+        </div>
+        <script>
+            var currentUser = document.getElementById('currentUser').innerHTML;
+            var client = mqtt.connect("ws://broker.i-dat.org:8000/mqtt");
+            //var client = mqtt.connect("ws://test.mosquitto.org:8080/mqtt"); 
+            //var client = mqtt.connect("ws://10.212.43.21:1884/mqtt"); 
+            client.on("connect", connectedToBroker);
+            
+            function connectedToBroker() {
+                console.log("Connected to broker");
+                client.subscribe("/" + currentUser);
+                client.on("message", messageReceived);
+            }
+            
+            function sendMessage(){
+                var receiver =  document.getElementById("receiver").value;
+                var message = document.getElementById("message").value;
+                var currentUser = document.getElementById("currentUser").innerHTML;
+                currentUser += ": " + message;
+                client.publish("/" + receiver, currentUser);
+            }
+            
+        
+            function messageReceived(topic, msg) {
+                console.log(topic + " " + msg);
+                var textNode = document.createTextNode(msg);
+                var paragraph = document.createElement('p');
+                paragraph.appendChild(textNode);
+                var divMessage = document.getElementById("messageBox");
+                divMessage.appendChild(paragraph);
+                
+            }
+        </script>
+    </body>
+</html>
